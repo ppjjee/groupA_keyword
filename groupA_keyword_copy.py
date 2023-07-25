@@ -234,7 +234,7 @@ def text_page1(cb):
         try:
             c1, c2, c3 = st.columns([0.07, 5, 0.07])
             with c1:
-                @st.cache(allow_output_mutation=True)
+                @st.cache_resource
                 def load_model():
                     return KeyBERT()
 
@@ -478,7 +478,7 @@ def text_page2(cb):
             c1, c2, c3 = st.columns([0.07, 5, 0.07])
             with c1:
 
-                @st.cache(allow_output_mutation=True)
+                @st.cache_resource
                 def load_model():
                     return KeyBERT()
 
@@ -727,7 +727,7 @@ def text_page3(cb):
             c1, c2, c3 = st.columns([0.07, 5, 0.07])
             with c1:
 
-                @st.cache(allow_output_mutation=True)
+                @st.cache_resource # st.cache(allow_output_mutation=True)
                 def load_model():
                     return KeyBERT()
 
@@ -1004,7 +1004,7 @@ def createAudio(filename):
 ## streamlit display codes
 def music_page(cb):
     st.title('Music Finder 🎵')
-    st.subheader("Now, we find music lists that match the image!")
+    st.subheader("Now, we find music lists that match the text!")
     st.caption('- The music searched in this study is a copyright-free sound sources provided for research purposes.')
     st.caption('- Therefore, we inform you that it may be different from the latest music you are familiar with.')
     st.write('-----')
@@ -1022,8 +1022,8 @@ def music_page(cb):
     ## save results
     with st.container():
         # satis_result = st.slider('Do you think the retrieved music represents the selected image well?', min_value=0, max_value=100, value=50, step=1)
-        satis_result = st.select_slider('Overall, do you think the retrieved music matches the selected images well?', options=['Strongly disagree', 'Disagree', 'Somewhat disagree', 'Neither agree nor disagree', 'Somewhat agree', 'Agree', 'Strongly agree'], value='Neither agree nor disagree')
-        st.caption("- Note: Please evaluate how well the selected image represents the music, rather than providing a 'like' or 'dislike' rating for the provided music.")
+        satis_result = st.select_slider('Overall, do you think the retrieved music matches the text you typed well?', options=['Strongly disagree', 'Disagree', 'Somewhat disagree', 'Neither agree nor disagree', 'Somewhat agree', 'Agree', 'Strongly agree'], value='Neither agree nor disagree')
+        st.caption("- Note: Please evaluate how well the typed text represents the music, rather than providing a 'like' or 'dislike' rating for the provided music.")
         st.write('-----')
     
         save_path = st.experimental_get_query_params()['path'][0]
