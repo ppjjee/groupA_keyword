@@ -1125,7 +1125,7 @@ def survey_page():
             ('Strongly agree', 'Agree', 'Neutral', 'Disagree', 'Strongly disagree'))
         
         situation = st.text_input(
-            "If this system becomes commercially available, in what situations do you think you will use it? (Example: When I want to listen to new music, but it is difficult to express my search terms in text.")
+            "If this system becomes commercially available, in what situations do you think you will use it? (Example: When I want to listen to new music, but it is difficult to express my search terms in text.)")
 
         if not situation:
             st.warning("Please kindly provide a response to the question.")
