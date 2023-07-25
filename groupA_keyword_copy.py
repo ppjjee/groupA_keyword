@@ -191,20 +191,21 @@ music_tags = [
 def text_page1(cb):
     # show frontend title 
     st.title("Let's find music!")
-    st.markdown('✔️ STEP 1: Please select your preferred scenario from the three provided options, and enter a short descriptive text that suits the chosen scenario to search for music.')
+    st.markdown('✔️ STEP 1: Please select your preferred scenario from the three provided options.')
     scenario = st.radio(
     "Please select a scenario that you preferred the most.",
-    ('Feeling tired but unable to sleep: Search for music to listen to in such a situation.', 
-    'During exercise (yoga or fitness, etc.): Search for music to listen to in such a situation.', 
-    'Preparing for a party: Search for music to listen to in such a situation.'))
-    if scenario == 'Feeling tired but unable to sleep: Search for music to listen to in such a situation.':
+    ('Feeling tired but unable to sleep.', 
+    'During exercise (yoga or fitness, etc.).', 
+    'Preparing for a party.'))
+    if scenario == 'Feeling tired but unable to sleep.':
         st.markdown("<span style='color:blue'>Example: a quiet, peaceful song good for sleeping.</span>",unsafe_allow_html=True)
-    elif scenario == 'During exercise (yoga or fitness, etc.): Search for music to listen to in such a situation.':
+    elif scenario == 'During exercise (yoga or fitness, etc.).':
         st.markdown("<span style='color:blue'>Example: meditative songs that are good to listen to while doing yoga.</span>",unsafe_allow_html=True)
     else: 
         st.markdown("<span style='color:blue'>Example: upbeat and trendy song.</span>",unsafe_allow_html=True)
     # st.markdown("✔️ Please describe the mood of the music you want to hear or the situation where you need music. We recommend music based on the entered text.")
-    st.markdown("✔️ STEP 2: After entering the text, click the button below and wait for a while until the next process.")
+    st.markdown("✔️ STEP 2: Enter a short descriptive text that suits the chosen scenario to search for music. We will find music that matches the text you have typed.")
+    st.markdown("✔️ STEP 3: After entering the text, click the button below and wait for a while until the next process.")
     st.error("⚠️The system may take a little time to initialize for the first run. From the second time onwards, it will be instant, so don't worry!")
     st.markdown(hide_menu, unsafe_allow_html = True)
     st.write("---")
@@ -445,20 +446,21 @@ def text_page1(cb):
 def text_page2(cb):
     # show frontend title 
     st.title("Let's find music!")
-    st.markdown('✔️ STEP 1: Please select your preferred scenario from the three provided options, and enter a short descriptive text that suits the chosen scenario to search for music.')
+    st.markdown('✔️ STEP 1: Please select your preferred scenario from the three provided options.')
     scenario = st.radio(
     "Please select a scenario that you preferred the most.",
-    ('Want to discover a new music: Search for music to listen to in such a situation.', 
-    'Playing with a child: Search for music to listen to in such a situation.', 
-    'Studying or working: Search for music to listen to in such a situation.'))
-    if scenario == 'Want to discover a new music: Search for music to listen to in such a situation.':
+    ('Want to discover a new music.', 
+    'Playing with a child.', 
+    'Studying or working.'))
+    if scenario == 'Want to discover a new music.':
         st.write("<span style='color:blue'>Example: soft and tranquil jazz music that is good to listen to as a background sound.</span>",unsafe_allow_html=True)
-    elif scenario == 'Playing with a child: Search for music to listen to in such a situation.':
+    elif scenario == 'Playing with a child.':
         st.write("<span style='color:blue'>Example: upbeat children's songs that I can play for my child.</span>",unsafe_allow_html=True)
     else: 
         st.write("<span style='color:blue'>Example: calm and peaceful classical music that is suitable for listening while working.</span>",unsafe_allow_html=True)
     # st.markdown("✔️ Please describe the mood of the music you want to hear or the situation where you need music. We recommend music based on the entered text.")
-    st.markdown("✔️ STEP 2: After entering the text, click the button below and wait for a while until the next process.")
+    st.markdown("✔️ STEP 2: Enter a short descriptive text that suits the chosen scenario to search for music. We will find music that matches the text you have typed.")
+    st.markdown("✔️ STEP 3: After entering the text, click the button below and wait for a while until the next process.")
     st.markdown(hide_menu, unsafe_allow_html = True)
     st.write("---")
     save_path = st.experimental_get_query_params()['path'][0]
@@ -693,20 +695,21 @@ def text_page2(cb):
 def text_page3(cb):
     # show frontend title 
     st.title("Let's find music!")
-    st.markdown('✔️ STEP 1: Please select your preferred scenario from the three provided options, and enter a short descriptive text that suits the chosen scenario to search for music.')
+    st.markdown('✔️ STEP 1: Please select your preferred scenario from the three provided options.')
     scenario = st.radio(
     "Please select a scenario that you preferred the most.",
-    ('Commuting to and from work: Search for music that matches your current mood in such a situation.', 
-    'Driving: Search for music that matches your current mood in such a situation.', 
-    'Emotional early morning hours: Search for music that matches your current mood in such a situation.'))
-    if scenario == 'Commuting to and from work: Search for music that matches your current mood in such a situation.':
+    ('Commuting to and from work.', 
+    'While driving or before driving.', 
+    'Emotional early morning hours.'))
+    if scenario == 'Commuting to and from work.':
         st.write("<span style='color:blue'>Example: lyrical and melancholy song good to listen to on the way to work.</span>",unsafe_allow_html=True)
-    elif scenario == 'Driving: Search for music that matches your current mood in such a situation.':
+    elif scenario == 'While driving or before driving.':
         st.write("<span style='color:blue'>Example: good song to listen to while driving.</span>",unsafe_allow_html=True)
     else: 
         st.write("<span style='color:blue'>Example: a song to listen to when I greet a hopeful morning.</span>",unsafe_allow_html=True)
     # st.markdown("✔️ Please describe the mood of the music you want to hear or the situation where you need music. We recommend music based on the entered text.")
-    st.markdown("✔️ STEP 2: After entering the text, click the button below and wait for a while until the next process.")
+    st.markdown("✔️ STEP 2: Enter a short descriptive text that suits the chosen scenario to search for music. We will find music that matches the text you have typed.")
+    st.markdown("✔️ STEP 3: After entering the text, click the button below and wait for a while until the next process.")
     st.markdown(hide_menu, unsafe_allow_html = True)
     st.write("---")
     save_path = st.experimental_get_query_params()['path'][0]
